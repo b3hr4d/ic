@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "ic-cketh-minter": {
+      "type": "custom",
+      "wasm": "optimised_target/ic-cketh-minter.wasm",
+      "candid": "optimised_target/ic-cketh-minter.did",
+      "package": "ic-cketh-minter",
+      "declarations": {
+        "output": "frontend/declarations/ic-cketh-minter",
+        "node_compatibility": true
+      }
+    },
+    "internet-identity": {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
+    "evm_rpc": {
+      "type": "custom",
+      "candid": "https://github.com/internet-computer-protocol/ic-eth-rpc/releases/download/release-2023-09-29/eth_rpc.did",
+      "wasm": "https://github.com/internet-computer-protocol/ic-eth-rpc/releases/download/release-2023-09-29/eth_rpc_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "a6d44-nyaaa-aaaap-abp7q-cai"
+        }
+      }
+    },
+    "frontend": {
+      "dependencies": ["payment"],
+      "frontend": {
+        "entrypoint": "out/index.html"
+      },
+      "source": ["out"],
+      "type": "assets"
+    }
+  },
+  "output_env_file": ".env.local",
+  "version": 1
+}

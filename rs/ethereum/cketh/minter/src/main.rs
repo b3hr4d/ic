@@ -1093,3 +1093,5 @@ fn check_candid_interface_compatibility() {
         candid_parser::utils::CandidSource::File(old_interface.as_path()),
     );
 }
+
+ic_cdk::export_candid!();
