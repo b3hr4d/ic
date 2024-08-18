@@ -12,13 +12,15 @@
       "type": "custom",
       "wasm": "./optimised_target/ledger/ledger_canister_u256.wasm.gz",
       "candid": "./optimised_target/ledger/ledger.did",
-      "shrink": false
+      "shrink": false,
+      "init_arg_file": "./optimised_target/ledger/init-args.did"
     },
     "index": {
       "type": "custom",
       "wasm": "./optimised_target/index-ng/index_ng_canister_u256.wasm.gz",
       "candid": "./optimised_target/index-ng/index-ng.did",
-      "shrink": false
+      "shrink": false,
+      "init_arg_file": "./optimised_target/index/init-args.did"
     },
     "archive": {
       "type": "custom",
