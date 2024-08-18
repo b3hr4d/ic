@@ -10,34 +10,24 @@
     },
     "ledger": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/ledger:ledger_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/ledger/ledger_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/ledger/ledger.did",
+      "wasm": "./optimised_target/ledger/ledger_canister_u256.wasm.gz",
+      "candid": "./optimised_target/ledger/ledger.did",
       "shrink": false
     },
     "index": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/index-ng:index_ng_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/index-ng/index_ng_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/index-ng/index-ng.did",
+      "wasm": "./optimised_target/index-ng/index_ng_canister_u256.wasm.gz",
+      "candid": "./optimised_target/index-ng/index-ng.did",
       "shrink": false
     },
     "archive": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/archive:archive_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/archive/archive_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/archive/archive.did",
+      "wasm": "./optimised_target/archive/archive_canister_u256.wasm.gz",
+      "candid": "./optimised_target/archive/archive.did",
       "shrink": false
     },
     "orchestrator": {
       "type": "custom",
-      "build": [],
       "wasm": "../../../../bazel-bin/rs/ethereum/ledger-suite-orchestrator/ledger_suite_orchestrator_canister.wasm.gz",
       "candid": "../../ledger-suite-orchestrator/ledger_suite_orchestrator.did",
       "shrink": false,
@@ -45,20 +35,14 @@
     },
     "ckusdc_ledger": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/ledger:ledger_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/ledger/ledger_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/ledger/ledger.did",
+      "wasm": "./optimised_target/ledger/ledger_canister_u256.wasm.gz",
+      "candid": "./optimised_target/ledger/ledger.did",
       "shrink": false
     },
     "ckusdc_index": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/index-ng:index_ng_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/index-ng/index_ng_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/index-ng/index-ng.did",
+      "wasm": "./optimised_target/index-ng/index_ng_canister_u256.wasm.gz",
+      "candid": "./optimised_target/index-ng/index-ng.did",
       "shrink": false
     }
   },
