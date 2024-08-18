@@ -1,15 +1,12 @@
 {
   "canisters": {
-    "ic-cketh-minter": {
+    "minter": {
       "type": "custom",
-      "wasm": "optimised_target/ic-cketh-minter.wasm",
-      "candid": "optimised_target/ic-cketh-minter.did",
-      "package": "ic-cketh-minter",
-      "declarations": {
-        "output": "frontend/declarations/ic-cketh-minter",
-        "node_compatibility": true
-      },
-      "init_arg_file": "optimised_target/init-args.did"
+      "build": [""],
+      "wasm": "../../../../bazel-bin/rs/ethereum/cketh/minter/cketh_minter.wasm.gz",
+      "candid": "cketh_minter.did",
+      "shrink": false,
+      "init_arg_file": "./optimised_target/init-args.did"
     },
     "ledger": {
       "type": "custom",
@@ -40,12 +37,11 @@
     },
     "orchestrator": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/ethereum/ledger-suite-orchestrator:ledger_suite_orchestrator_canister.wasm.gz"
-      ],
+      "build": [],
       "wasm": "../../../../bazel-bin/rs/ethereum/ledger-suite-orchestrator/ledger_suite_orchestrator_canister.wasm.gz",
       "candid": "../../ledger-suite-orchestrator/ledger_suite_orchestrator.did",
-      "shrink": false
+      "shrink": false,
+      "init_arg_file": "./optimised_target/orchestrator-init-args.did"
     },
     "ckusdc_ledger": {
       "type": "custom",
@@ -64,58 +60,8 @@
       "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/index-ng/index_ng_canister_u256.wasm.gz",
       "candid": "../../../rosetta-api/icrc1/index-ng/index-ng.did",
       "shrink": false
-    },
-    "cklink_ledger": {
-      "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/ledger:ledger_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/ledger/ledger_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/ledger/ledger.did",
-      "shrink": false
-    },
-    "cklink_index": {
-      "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/index-ng:index_ng_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/index-ng/index_ng_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/index-ng/index-ng.did",
-      "shrink": false
-    },
-    "ckpepe_ledger": {
-      "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/ledger:ledger_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/ledger/ledger_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/ledger/ledger.did",
-      "shrink": false
-    },
-    "ckpepe_index": {
-      "type": "custom",
-      "build": [
-        "bazel build //rs/rosetta-api/icrc1/index-ng:index_ng_canister_u256.wasm.gz"
-      ],
-      "wasm": "../../../../bazel-bin/rs/rosetta-api/icrc1/index-ng/index_ng_canister_u256.wasm.gz",
-      "candid": "../../../rosetta-api/icrc1/index-ng/index-ng.did",
-      "shrink": false
-    },
-    "internet-identity": {
-      "type": "pull",
-      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
-    },
-    "evm_rpc": {
-      "type": "custom",
-      "candid": "https://github.com/internet-computer-protocol/ic-eth-rpc/releases/download/release-2023-09-29/eth_rpc.did",
-      "wasm": "https://github.com/internet-computer-protocol/ic-eth-rpc/releases/download/release-2023-09-29/eth_rpc_dev.wasm.gz",
-      "remote": {
-        "id": {
-          "ic": "a6d44-nyaaa-aaaap-abp7q-cai"
-        }
-      }
     }
   },
-  "output_env_file": ".env.local",
+  "output_env_file": ".env",
   "version": 1
 }

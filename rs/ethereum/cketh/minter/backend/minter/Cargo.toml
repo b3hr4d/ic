@@ -1,5 +1,5 @@
 [package]
-name = "ic-cketh-minter"
+name = "minter"
 version = "0.1.0"
 edition = "2021"
 
@@ -48,7 +48,6 @@ strum_macros = { workspace = true }
 thiserror = { workspace = true }
 thousands = "0.2"
 time = { workspace = true }
-getrandom = { version = "0.2.11", features = ["custom"] }
 
 [dev-dependencies]
 assert_matches = { workspace = true }

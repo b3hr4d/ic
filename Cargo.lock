@@ -6340,7 +6340,6 @@ dependencies = [
  "evm-rpc-client",
  "flate2",
  "futures",
- "getrandom 0.2.12",
  "hex",
  "hex-literal",
  "ic-agent",
