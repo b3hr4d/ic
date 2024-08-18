@@ -12,8 +12,8 @@
   },
   "files": {
     "contracts/CkTokenDeposit.sol": {
-      "lastModificationDate": 1723979349880,
-      "contentHash": "ffdff2fdd0b4dc96a7609d1dd2eca6b0",
+      "lastModificationDate": 1723981119940,
+      "contentHash": "de7bd3a26b447d16be73316490e82413",
       "sourceName": "contracts/CkTokenDeposit.sol",
       "solcConfig": {
         "settings": {

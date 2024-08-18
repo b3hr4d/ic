@@ -85,7 +85,11 @@ contract CkTokenDeposit {
         bytes32 principal
     ) public {
         IERC721 nftToken = IERC721(nft_address);
-        nftToken.transferFrom(msg.sender, cketh_minter_main_address, tokenId);
+        nftToken.safeTransferFrom(
+            msg.sender,
+            cketh_minter_main_address,
+            tokenId
+        );
 
         emit ReceivedNft(nft_address, msg.sender, tokenId, principal);
     }
