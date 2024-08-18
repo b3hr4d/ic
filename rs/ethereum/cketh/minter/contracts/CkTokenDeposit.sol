@@ -5,13 +5,12 @@ pragma solidity 0.8.20;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 
 /**
  * @title A helper smart contract for ETH/ERC20/NFT <-> ckETH/ckERC20/ckNFT conversion.
  * @notice This smart contract deposits incoming ETH/ERC20/NFT to the ckETH minter account and emits deposit events.
  */
-contract CkTokenDeposit is ERC721Holder {
+contract CkTokenDeposit {
     using SafeERC20 for IERC20;
 
     address payable private immutable cketh_minter_main_address;
@@ -86,11 +85,7 @@ contract CkTokenDeposit is ERC721Holder {
         bytes32 principal
     ) public {
         IERC721 nftToken = IERC721(nft_address);
-        nftToken.safeTransferFrom(
-            msg.sender,
-            cketh_minter_main_address,
-            tokenId
-        );
+        nftToken.transferFrom(msg.sender, cketh_minter_main_address, tokenId);
 
         emit ReceivedNft(nft_address, msg.sender, tokenId, principal);
     }
