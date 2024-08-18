@@ -1,7 +1,7 @@
 variant {
     Init = record {
         minting_account = record {
-            owner = principal "ahw5u-keaaa-aaaaa-qaaha-cai";
+            owner = principal "b77ix-eeaaa-aaaaa-qaada-cai";
         };
         feature_flags = opt record { icrc2 = true };
         decimals = opt 18;
@@ -18,6 +18,6 @@ variant {
             cycles_for_archive_creation = opt 1_000_000_000_000;
             node_max_memory_size_bytes = opt 3_221_225_472;
             controller_id = principal "mf7xa-laaaa-aaaar-qaaaa-cai";
-        }
+        };
     }
 }

@@ -114,7 +114,7 @@ rust_test(
 rust_test(
     name = "unit_tests",
     crate = ":_wasm_cketh_minter",
-    data = [":cketh_minter.did"],
+    data = [":optimised_target/minter/ic-cketh-minter.did"],
     env = {
         "CARGO_MANIFEST_DIR": "rs/ethereum/cketh/minter",
     },
@@ -140,7 +140,7 @@ rust_test(
         # Keep sorted.
         "@crate_index//:ic-cdk-macros",
     ],
-    service_file = "cketh_minter.did",
+    service_file = "optimised_target/minter/ic-cketh-minter.did",
     deps = [
         # Keep sorted.
         ":minter",

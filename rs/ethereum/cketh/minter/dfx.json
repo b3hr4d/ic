@@ -2,11 +2,11 @@
   "canisters": {
     "minter": {
       "type": "custom",
-      "build": [""],
+      "build": ["bazel build //rs/ethereum/cketh/minter:cketh_minter.wasm.gz"],
       "wasm": "../../../../bazel-bin/rs/ethereum/cketh/minter/cketh_minter.wasm.gz",
       "candid": "cketh_minter.did",
       "shrink": false,
-      "init_arg_file": "./optimised_target/init-args.did"
+      "init_arg_file": "optimised_target/minter/init-args.did"
     },
     "ledger": {
       "type": "custom",
