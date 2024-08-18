@@ -8,7 +8,8 @@
       "declarations": {
         "output": "frontend/declarations/ic-cketh-minter",
         "node_compatibility": true
-      }
+      },
+      "init_arg_file": "optimised_target/init-args.did"
     },
     "ledger": {
       "type": "custom",
@@ -113,14 +114,6 @@
           "ic": "a6d44-nyaaa-aaaap-abp7q-cai"
         }
       }
-    },
-    "frontend": {
-      "dependencies": ["payment"],
-      "frontend": {
-        "entrypoint": "out/index.html"
-      },
-      "source": ["out"],
-      "type": "assets"
     }
   },
   "output_env_file": ".env.local",

@@ -1,0 +1,12 @@
+variant {
+    InitArg = record {
+        ethereum_network = variant { Sepolia };
+        last_scraped_block_number = 6_518_805 : nat;
+        ecdsa_key_name = "dfx_test_key";
+        next_transaction_nonce = 0 : nat;
+        ledger_id = principal "apia6-jaaaa-aaaar-qabma-cai";
+        ethereum_contract_address = opt "0xb44B5e756A894775FC32EDdf3314Bb1B1944dC34";
+        minimum_withdrawal_amount = 10_000_000_000_000_000 : nat;
+        ethereum_block_height = variant { Finalized };
+    }
+}
