@@ -1,3 +1,6 @@
 [submodule "rs/ethereum/cketh/minter/lib/openzeppelin-foundry-upgrades"]
 	path = rs/ethereum/cketh/minter/lib/openzeppelin-foundry-upgrades
 	url = https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades
+[submodule "rs/ethereum/cketh/minter/lib/openzeppelin-contracts-upgradeable"]
+	path = rs/ethereum/cketh/minter/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
