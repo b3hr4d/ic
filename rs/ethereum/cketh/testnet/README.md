@@ -33,8 +33,9 @@ dfx deploy --network ic minter --argument '(variant {InitArg = record { ethereum
 ```
 
 ### Upgrading for ckERC20
+
 ```shell
-dfx deploy minter --network ic --argument "(variant {UpgradeArg = record {ledger_suite_orchestrator_id = opt principal \"$(dfx canister --network ic id orchestrator)\"; erc20_helper_contract_address = opt \"0x674Cdbe64Df412DA9bAb1596e00c1520979B5A23\"; last_erc20_scraped_block_number = opt 5680659;}})" --wallet mf7xa-laaaa-aaaar-qaaaa-cai
+dfx deploy minter --argument "(variant {UpgradeArg = record {ledger_suite_orchestrator_id = opt principal \"$(dfx canister id orchestrator)\"; erc20_helper_contract_address = opt \"0x674Cdbe64Df412DA9bAb1596e00c1520979B5A23\"; last_erc20_scraped_block_number = opt 5680659;}})" --wallet mf7xa-laaaa-aaaar-qaaaa-cai
 ```
 
 Note: you can query the next nonce using:
@@ -53,7 +54,6 @@ curl -X POST 'https://ethereum-sepolia.publicnode.com' \
     }'
 ```
 
-
 ## Deploying the index
 
 ### Mainnet
@@ -68,7 +68,7 @@ dfx deploy --network ic index --argument '(opt variant {Init = record { ledger_i
 
 ```shell
 dfx canister create orchestrator
-dfx deploy orchestrator --network ic --argument "(variant { InitArg = record { more_controller_ids = vec { principal \"mf7xa-laaaa-aaaar-qaaaa-cai\"; }; minter_id = opt principal \"$(dfx canister --network ic id minter)\"; cycles_management = opt record { cycles_for_ledger_creation = 2_000_000_000_000 ; cycles_for_archive_creation = 1_000_000_000_000; cycles_for_index_creation = 1_000_000_000_000; cycles_top_up_increment = 500_000_000_000 } }})"
+dfx deploy orchestrator --argument "(variant { InitArg = record { more_controller_ids = vec { principal \"mf7xa-laaaa-aaaar-qaaaa-cai\"; }; minter_id = opt principal \"$(dfx canister id minter)\"; cycles_management = opt record { cycles_for_ledger_creation = 2_000_000_000_000 ; cycles_for_archive_creation = 1_000_000_000_000; cycles_for_index_creation = 1_000_000_000_000; cycles_top_up_increment = 500_000_000_000 } }})"
 ```
 
 ### Mainnet

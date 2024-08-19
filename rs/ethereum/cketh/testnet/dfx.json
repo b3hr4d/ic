@@ -3,9 +3,7 @@
   "canisters": {
     "minter": {
       "type": "custom",
-      "build": [
-        "bazel build //rs/ethereum/cketh/minter:cketh_minter.wasm.gz"
-      ],
+      "build": ["bazel build //rs/ethereum/cketh/minter:cketh_minter.wasm.gz"],
       "wasm": "../../../../bazel-bin/rs/ethereum/cketh/minter/cketh_minter.wasm.gz",
       "candid": "../minter/cketh_minter.did",
       "shrink": false
@@ -105,12 +103,6 @@
     "build": {
       "packtool": "",
       "args": ""
-    }
-  },
-  "networks": {
-    "local": {
-      "bind": "127.0.0.1:8000",
-      "type": "ephemeral"
     }
   }
 }
