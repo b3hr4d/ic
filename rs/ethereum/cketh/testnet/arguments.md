@@ -7,7 +7,7 @@ dfx deploy ledger --argument '(variant { Init = record { minting_account = recor
 ```
 
 ```shell
-dfx deploy minter --argument '(variant {InitArg = record { ethereum_network = variant {Sepolia} ; ecdsa_key_name = "key_1"; ethereum_contract_address = opt "0x68Ad36013DA43b8938D0CDAdcee186bf24B97e1C" ; ledger_id = principal "'"$(dfx canister id ledger)"'"; ethereum_block_height = variant {Finalized} ; minimum_withdrawal_amount = 10_000_000_000_000_000; next_transaction_nonce = 0 }})'
+dfx deploy minter --argument '(variant {InitArg = record { ethereum_network = variant {Sepolia} ; ecdsa_key_name = "dfx_test_key"; ethereum_contract_address = opt "0x68Ad36013DA43b8938D0CDAdcee186bf24B97e1C" ; ledger_id = principal "'"$(dfx canister id ledger)"'"; ethereum_block_height = variant {Finalized} ; minimum_withdrawal_amount = 10_000_000_000_000_000; next_transaction_nonce = 0 ; last_scraped_block_number = 6523854; }})'
 ```
 
 ```shell
